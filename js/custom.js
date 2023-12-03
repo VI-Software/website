@@ -1,33 +1,32 @@
+/*^
 
-  (function ($) {
-  
-  "use strict";
-
-    // NAVBAR
-    $('.navbar-nav .nav-link').click(function(){
-        $(".navbar-collapse").collapse('hide');
-    });
-
-    // CUSTOM LINK 
-    $('.custom-link').click(function(){
-    var el = $(this).attr('href');
-    var elWrapped = $(el);
-    var header_height = $('.navbar').height() + 10;
-
-    scrollToDiv(elWrapped,header_height);
-    return false;
-
-    function scrollToDiv(element,navheight){
-      var offset = element.offset();
-      var offsetTop = offset.top;
-      var totalScroll = offsetTop-navheight;
-
-      $('body,html').animate({
-      scrollTop: totalScroll
-      }, 300);
-  }
-});
+  ____   ____.__    _________       _____  __                                 
+\   \ /   /|__|  /   _____/ _____/ ____\/  |___  _  _______ _______   ____  
+ \   Y   / |  |  \_____  \ /  _ \   __\\   __\ \/ \/ /\__  \\_  __ \_/ __ \ 
+  \     /  |  |  /        (  <_> )  |   |  |  \     /  / __ \|  | \/\  ___/ 
+   \___/   |__| /_______  /\____/|__|   |__|   \/\_/  (____  /__|    \___  >
+                        \/                                 \/            \/ 
     
-  })(window.jQuery);
+    Copyright (©) 2023 VI Software y contribuidores.
+    Licencia: GNU GENERAL PUBLIC LICENSE
+
+*/
+var nav = $("#navbarSupportedContent");
+var btn = $(".custom_menu-btn");
+btn.click
+btn.click(function (e) {
+
+    e.preventDefault();
+    nav.toggleClass("lg_nav-toggle");
+    document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+});
 
 
+function getCurrentYear() {
+    var d = new Date();
+    var currentYear = d.getFullYear()
+
+    $("#displayDate").html(currentYear);
+}
+
+getCurrentYear();
